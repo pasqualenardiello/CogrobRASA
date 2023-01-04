@@ -1,0 +1,2957 @@
+version: "2.0"
+stories:
+
+- story: story_thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+  
+- story: wants_to_id_after_greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+  - action: action_identify
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - requested_slot: user
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Ski lesson
+    - deadline: 14/12/2022 16:00
+    - reminder: set
+  - slot_was_set:
+    - acname: Ski lesson
+  - slot_was_set:
+    - deadline: 14/12/2022 16:00
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - acname: Ski lesson
+  - slot_was_set:
+    - deadline: 14/12/2022 16:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Ski lesson
+  - slot_was_set:
+    - deadline: 14/12/2022 16:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Swimming lesson
+  - slot_was_set:
+    - acname: Swimming lesson
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: thankyou
+  - action: utter_noworries
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - requested_slot: user
+  - slot_was_set:
+    - user: Gerardo Carraturo
+  - slot_was_set:
+    - user: Gerardo Carraturo
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Gerardo Carraturo
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_3
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: greet
+  - intent: identity_provider
+    entities:
+    - user: Gerardo Carraturo
+  - slot_was_set:
+    - user: Gerardo Carraturo
+  - action: action_identify
+  - slot_was_set:
+    - user: Gerardo Carraturo
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+    entities:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - action: action_identify
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Snorkeling
+    - reminder: set
+    - deadline: 12/03/2023 17:00
+    - category: SPORT
+  - slot_was_set:
+    - acname: Snorkeling
+  - slot_was_set:
+    - deadline: 12/03/2023 17:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - acname: Snorkeling
+  - slot_was_set:
+    - deadline: 12/03/2023 17:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Snorkeling
+  - slot_was_set:
+    - deadline: 12/03/2023 17:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: coding
+  - slot_was_set:
+    - acname: coding
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - acname: coding
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: coding
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 17/08/2024 15:20
+  - slot_was_set:
+    - deadline: 17/08/2024 15:20
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: PROGRAMMING
+  - slot_was_set:
+    - category: PROGRAMMING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Funnygaming
+  - slot_was_set:
+    - acname: Funnygaming
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - acname: Funnygaming
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Funnygaming
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: CHILLING
+  - slot_was_set:
+    - category: CHILLING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - category: Snorkeling
+  - slot_was_set:
+    - category: Snorkeling
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Snorkeling
+  - slot_was_set:
+    - acname: Snorkeling
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: coding
+  - slot_was_set:
+    - acname: coding
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - acname: coding
+  - slot_was_set:
+    - acname: coding
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 15/12/2022 12:00
+  - slot_was_set:
+    - deadline: 15/12/2022 12:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: Funnygaming
+    - category: GAMING
+  - slot_was_set:
+    - acname: Funnygaming
+  - slot_was_set:
+    - category: GAMING
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - acname: Funnygaming
+  - slot_was_set:
+    - category: GAMING
+  - slot_was_set:
+    - acname: Funnygaming
+  - slot_was_set:
+    - category: GAMING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Domenico Longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_5
+  steps:
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - requested_slot: user
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: gyno screening
+    - deadline: 12/12/2022 11:00
+    - reminder: set
+  - slot_was_set:
+    - acname: gyno screening
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - acname: gyno screening
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: gyno screening
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: HEALTH
+  - slot_was_set:
+    - category: HEALTH
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Eye Screening
+    - deadline: 12/11/2022 14:00
+    - category: HEALTH
+  - slot_was_set:
+    - acname: Eye Screening
+  - slot_was_set:
+    - deadline: 12/11/2022 14:00
+  - slot_was_set:
+    - category: HEALTH
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - acname: Eye Screening
+  - slot_was_set:
+    - deadline: 12/11/2022 14:00
+  - slot_was_set:
+    - category: HEALTH
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Eye Screening
+  - slot_was_set:
+    - deadline: 12/11/2022 14:00
+  - slot_was_set:
+    - category: HEALTH
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: gyno screening
+  - slot_was_set:
+    - acname: gyno screening
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - acname: gyno screening
+  - slot_was_set:
+    - acname: gyno screening
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 16/04/2025 12:00
+  - slot_was_set:
+    - deadline: 16/04/2025 12:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Eye Screening
+  - slot_was_set:
+    - acname: Eye Screening
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Iodice
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_6
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - action: action_identify
+  - intent: identity_provider
+    entities:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - action: action_identify
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Cogrob exam
+  - slot_was_set:
+    - acname: Cogrob exam
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: House finding
+    - deadline: 02/02/2023 16:00
+    - reminder: set
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 02/02/2023 16:00
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 02/02/2023 16:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 02/02/2023 16:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: WORK
+  - slot_was_set:
+    - category: WORK
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_7
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - action: action_identify
+  - intent: identity_provider
+    entities:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - action: action_identify
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: House finding
+    - deadline: 05/02/2023 16:00
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 05/02/2023 16:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 05/02/2023 16:00
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 05/02/2023 16:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Dog sitting
+    - deadline: 12/12/2022 17:00
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - deadline: 12/12/2022 17:00
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - deadline: 12/12/2022 17:00
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - deadline: 12/12/2022 17:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: WORK
+  - slot_was_set:
+    - category: WORK
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Tax paying
+    - deadline: 02/01/2023 10:00
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 02/01/2023 10:00
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 02/01/2023 10:00
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 02/01/2023 10:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: MONEY
+  - slot_was_set:
+    - category: MONEY
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: Dog sitting
+    - category: HOBBY
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - category: HOBBY
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - category: HOBBY
+  - slot_was_set:
+    - acname: Dog sitting
+  - slot_was_set:
+    - category: HOBBY
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - requested_slot: user
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Dog sitting
+  - slot_was_set:
+    - acname: Dog sitting
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: House finding
+    - deadline: 16/03/2023 11:00
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 16/03/2023 11:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 16/03/2023 11:00
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - deadline: 16/03/2023 11:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: monologuing
+    - deadline: 12/11/2022 17:00
+  - slot_was_set:
+    - acname: monologuing
+  - slot_was_set:
+    - deadline: 12/11/2022 17:00
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: monologuing
+  - slot_was_set:
+    - deadline: 12/11/2022 17:00
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: monologuing
+  - slot_was_set:
+    - deadline: 12/11/2022 17:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: IMPROVEMENT
+  - slot_was_set:
+    - category: IMPROVEMENT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Tax paying
+    - deadline: 11/05/2023 12:00
+    - category: UNIVERSITY
+    - reminder: set
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 11/05/2023 12:00
+  - slot_was_set:
+    - category: UNIVERSITY
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 11/05/2023 12:00
+  - slot_was_set:
+    - category: UNIVERSITY
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Tax paying
+  - slot_was_set:
+    - deadline: 11/05/2023 12:00
+  - slot_was_set:
+    - category: UNIVERSITY
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: monologuing
+  - slot_was_set:
+    - acname: monologuing
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: Dance lesson
+  - slot_was_set:
+    - acname: Dance lesson
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - acname: Dance lesson
+  - slot_was_set:
+    - acname: Dance lesson
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 06/02/2023 11:00
+  - slot_was_set:
+    - deadline: 06/02/2023 11:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - requested_slot: user
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Bowling
+    - deadline: 16/11/2022 18:00
+    - reminder: set
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 16/11/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 16/11/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 16/11/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: FUN
+  - slot_was_set:
+    - category: FUN
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: taxes
+    - deadline: 15/12/2022 18:00
+    - category: MONEY
+  - slot_was_set:
+    - acname: taxes
+  - slot_was_set:
+    - deadline: 15/12/2022 18:00
+  - slot_was_set:
+    - category: MONEY
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - acname: taxes
+  - slot_was_set:
+    - deadline: 15/12/2022 18:00
+  - slot_was_set:
+    - category: MONEY
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: taxes
+  - slot_was_set:
+    - deadline: 15/12/2022 18:00
+  - slot_was_set:
+    - category: MONEY
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: taxes
+  - slot_was_set:
+    - acname: taxes
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: Bowling
+    - deadline: 17/12/2022 18:00
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 17/12/2022 18:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 17/12/2022 18:00
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - deadline: 17/12/2022 18:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+    entities:
+    - user: Giovanni d'Arcella
+  - slot_was_set:
+    - user: Giovanni d'Arcella
+  - action: action_identify
+  - slot_was_set:
+    - user: Giovanni d'Arcella
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Boxing
+    - deadline: 15/11/2022 18:00
+    - category: SPORT
+  - slot_was_set:
+    - acname: Boxing
+  - slot_was_set:
+    - deadline: 15/11/2022 18:00
+  - slot_was_set:
+    - category: SPORT
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Giovanni d'Arcella
+  - slot_was_set:
+    - acname: Boxing
+  - slot_was_set:
+    - deadline: 15/11/2022 18:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Boxing
+  - slot_was_set:
+    - deadline: 15/11/2022 18:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Giovanni d'Arcella
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Gregorio Maria Pio
+  - slot_was_set:
+    - user: Gregorio Maria Pio
+  - action: action_identify
+  - slot_was_set:
+    - user: Gregorio Maria Pio
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Bird watching
+    - deadline: 12/12/2022 11:00
+    - category: NATURE
+    - reminder: set
+  - slot_was_set:
+    - acname: Bird watching
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - category: NATURE
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Gregorio Maria Pio
+  - slot_was_set:
+    - acname: Bird watching
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - category: NATURE
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Bird watching
+  - slot_was_set:
+    - deadline: 12/12/2022 11:00
+  - slot_was_set:
+    - category: NATURE
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Gregorio Maria Pio
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Gregorio Franco Alfonso
+  - slot_was_set:
+    - user: Gregorio Franco Alfonso
+  - action: action_identify
+  - slot_was_set:
+    - user: Gregorio Franco Alfonso
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Netflix scrolling
+  - slot_was_set:
+    - acname: Netflix scrolling
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Gregorio Franco Alfonso
+  - slot_was_set:
+    - acname: Netflix scrolling
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Netflix scrolling
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 17/11/2022 11:00
+  - slot_was_set:
+    - deadline: 17/11/2022 11:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: CHILLING
+  - slot_was_set:
+    - category: CHILLING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Gregorio Franco Alfonso
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Luca de Luca
+  - slot_was_set:
+    - user: Luca de Luca
+  - action: action_identify
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: Bowling
+    - category: SPORT
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - category: SPORT
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - acname: Bowling
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: thankyou
+  - action: utter_noworries
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Marco Tullio Cicerone
+  - slot_was_set:
+    - user: Marco Tullio Cicerone
+  - action: action_identify
+  - slot_was_set:
+    - user: Marco Tullio Cicerone
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Marco Tullio Cicerone
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Marco Tullio Cicerone
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Flavio della Monica
+  - slot_was_set:
+    - user: Flavio della Monica
+  - action: action_identify
+  - slot_was_set:
+    - user: Flavio della Monica
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Karate lesson
+    - reminder: set
+    - deadline: 12/12/2022 18:00
+  - slot_was_set:
+    - acname: Karate lesson
+  - slot_was_set:
+    - deadline: 12/12/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Flavio della Monica
+  - slot_was_set:
+    - acname: Karate lesson
+  - slot_was_set:
+    - deadline: 12/12/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Karate lesson
+  - slot_was_set:
+    - deadline: 12/12/2022 18:00
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Flavio della Monica
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Luigi d'Antonio
+  - slot_was_set:
+    - user: Luigi d'Antonio
+  - action: action_identify
+  - slot_was_set:
+    - user: Luigi d'Antonio
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Luca de Luca
+  - slot_was_set:
+    - user: Luca de Luca
+  - action: action_identify
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Bowling
+  - slot_was_set:
+    - acname: Bowling
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: thankyou
+  - action: utter_noworries
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+    entities:
+    - user: Diego Armando Maradona
+  - slot_was_set:
+    - user: Diego Armando Maradona
+  - action: action_identify
+  - slot_was_set:
+    - user: Diego Armando Maradona
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Ski diving
+    - deadline: 15/12/2022 16:00
+    - category: SPORT
+    - reminder: set
+  - slot_was_set:
+    - acname: Ski diving
+  - slot_was_set:
+    - deadline: 15/12/2022 16:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Diego Armando Maradona
+  - slot_was_set:
+    - acname: Ski diving
+  - slot_was_set:
+    - deadline: 15/12/2022 16:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Ski diving
+  - slot_was_set:
+    - deadline: 15/12/2022 16:00
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Diego Armando Maradona
+  - slot_was_set:
+    - reminder: unset
+  - intent: thankyou
+  - action: utter_noworries
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Luca de Luca
+  - slot_was_set:
+    - user: Luca de Luca
+  - action: action_identify
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Jogging
+    - deadline: 14/11/2022 11:00
+  - slot_was_set:
+    - acname: Jogging
+  - slot_was_set:
+    - deadline: 14/11/2022 11:00
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - acname: Jogging
+  - slot_was_set:
+    - deadline: 14/11/2022 11:00
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: Jogging
+  - slot_was_set:
+    - deadline: 14/11/2022 11:00
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: FITNESS
+  - slot_was_set:
+    - category: FITNESS
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Luca de Luca
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: Swim practice
+    - deadline: 15/12/2022 12:00
+  - slot_was_set:
+    - acname: Swim practice
+  - slot_was_set:
+    - deadline: 15/12/2022 12:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - acname: Swim practice
+  - slot_was_set:
+    - deadline: 15/12/2022 12:00
+  - slot_was_set:
+    - acname: Swim practice
+  - slot_was_set:
+    - deadline: 15/12/2022 12:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - user: Giovanni Rana
+  - action: action_identify
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: Tax paying
+  - slot_was_set:
+    - acname: Tax paying
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: House finding
+    - category: LIVING
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - category: LIVING
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - category: LIVING
+  - slot_was_set:
+    - acname: House finding
+  - slot_was_set:
+    - category: LIVING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Giovanni Rana
+  - slot_was_set:
+    - reminder: unset
+  - intent: thankyou
+  - action: utter_noworries
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Luca d'Avanzo
+  - slot_was_set:
+    - user: Luca d'Avanzo
+  - action: action_identify
+  - slot_was_set:
+    - user: Luca d'Avanzo
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Lucia della Valle
+  - slot_was_set:
+    - user: Lucia della Valle
+  - action: action_identify
+  - slot_was_set:
+    - user: Lucia della Valle
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Paolo Maria Gomez
+  - slot_was_set:
+    - user: Paolo Maria Gomez
+  - action: action_identify
+  - slot_was_set:
+    - user: Paolo Maria Gomez
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: Riccardo Domenico Nardiello
+  - slot_was_set:
+    - user: Riccardo Domenico Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Riccardo Domenico Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - action: action_identify
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: jogging
+  - slot_was_set:
+    - acname: jogging
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: bird watching
+  - slot_was_set:
+    - acname: bird watching
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: ski diving
+  - slot_was_set:
+    - acname: ski diving
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: boxing
+  - slot_was_set:
+    - acname: boxing
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: squats
+  - slot_was_set:
+    - acname: squats
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: swimming
+  - slot_was_set:
+    - acname: swimming
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: singing
+    - deadline: 11/11/2011 11:11
+    - category: SING
+  - slot_was_set:
+    - acname: singing
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SING
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: singing
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SING
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: singing
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SING
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: surf lesson
+    - deadline: 11/11/2011 11:11
+    - category: SPORT
+  - slot_was_set:
+    - acname: surf lesson
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SPORT
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: surf lesson
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: surf lesson
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: boxe
+    - deadline: 13/12/2022 11:10
+    - category: SPORT
+  - slot_was_set:
+    - acname: boxe
+  - slot_was_set:
+    - deadline: 13/12/2022 11:10
+  - slot_was_set:
+    - category: SPORT
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: boxe
+  - slot_was_set:
+    - deadline: 13/12/2022 11:10
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: boxe
+  - slot_was_set:
+    - deadline: 13/12/2022 11:10
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: drawing
+    - category: ART
+  - slot_was_set:
+    - acname: drawing
+  - slot_was_set:
+    - category: ART
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: drawing
+  - slot_was_set:
+    - category: ART
+  - slot_was_set:
+    - acname: drawing
+  - slot_was_set:
+    - category: ART
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: fishing lesson
+    - category: SPORT
+  - slot_was_set:
+    - acname: fishing lesson
+  - slot_was_set:
+    - category: SPORT
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: fishing lesson
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - acname: fishing lesson
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: gliding
+    - deadline: 12/12/2012 11:00
+  - slot_was_set:
+    - acname: gliding
+  - slot_was_set:
+    - deadline: 12/12/2012 11:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: gliding
+  - slot_was_set:
+    - deadline: 12/12/2012 11:00
+  - slot_was_set:
+    - acname: gliding
+  - slot_was_set:
+    - deadline: 12/12/2012 11:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: golf
+    - deadline: 12/12/2022 12:00
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 12/12/2022 12:00
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 12/12/2022 12:00
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 12/12/2022 12:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: Alberto Giovanni Bergoglio
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - action: action_identify
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: Swim lesson
+    - deadline: 05/11/2022 18:23
+    - category: SPORT
+    - reminder: set
+  - slot_was_set:
+    - acname: Swim lesson
+  - slot_was_set:
+    - deadline: 05/11/2022 18:23
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - acname: Swim lesson
+  - slot_was_set:
+    - deadline: 05/11/2022 18:23
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: Swim lesson
+  - slot_was_set:
+    - deadline: 05/11/2022 18:23
+  - slot_was_set:
+    - category: SPORT
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: Pasquale Nardiello
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_info
+  - intent: identity_provider
+    entities:
+    - user: sandro tonali
+  - slot_was_set:
+    - user: sandro tonali
+  - action: action_identify
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: preying
+    - reminder: set
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 11/12/2023 15:20
+  - slot_was_set:
+    - deadline: 11/12/2023 15:20
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: religion
+  - slot_was_set:
+    - category: religion
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: sandwich making
+  - slot_was_set:
+    - acname: sandwich making
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - acname: sandwich making
+  - slot_was_set:
+    - acname: sandwich making
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: hobbies
+  - slot_was_set:
+    - category: hobbies
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: tango
+  - slot_was_set:
+    - acname: tango
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - acname: tango
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: tango
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - deadline: 11/11/2011 11:11
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: dancing
+  - slot_was_set:
+    - category: dancing
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_show
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: tango
+  - slot_was_set:
+    - acname: tango
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: preying
+  - slot_was_set:
+    - acname: preying
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - requested_slot: deadline
+  - slot_was_set:
+    - deadline: 11/11/2023 12:00
+  - slot_was_set:
+    - deadline: 11/11/2023 12:00
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: preying
+    - category: mystic
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - category: mystic
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - category: mystic
+  - slot_was_set:
+    - acname: preying
+  - slot_was_set:
+    - category: mystic
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: sandro tonali
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: fabio dell'anno
+  - slot_was_set:
+    - user: fabio dell'anno
+  - action: action_identify
+  - slot_was_set:
+    - user: fabio dell'anno
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+
+- story: interactive_story_1
+  steps:
+  - intent: identity_provider
+    entities:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - action: action_identify
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: sea diving
+    - reminder: set
+    - deadline: 11/12/2023 11:11
+    - category: action
+  - slot_was_set:
+    - acname: sea diving
+  - slot_was_set:
+    - deadline: 11/12/2023 11:11
+  - slot_was_set:
+    - category: action
+  - slot_was_set:
+    - reminder: set
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - acname: sea diving
+  - slot_was_set:
+    - deadline: 11/12/2023 11:11
+  - slot_was_set:
+    - category: action
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - acname: sea diving
+  - slot_was_set:
+    - deadline: 11/12/2023 11:11
+  - slot_was_set:
+    - category: action
+  - slot_was_set:
+    - reminder: set
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: karate
+  - slot_was_set:
+    - acname: karate
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: golf
+    - deadline: 11/11/2022 22:20
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 11/11/2022 22:20
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 11/11/2022 22:20
+  - slot_was_set:
+    - acname: golf
+  - slot_was_set:
+    - deadline: 11/11/2022 22:20
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: kungfu
+    - category: fighting
+  - slot_was_set:
+    - acname: kungfu
+  - slot_was_set:
+    - category: fighting
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - acname: kungfu
+  - slot_was_set:
+    - category: fighting
+  - slot_was_set:
+    - acname: kungfu
+  - slot_was_set:
+    - category: fighting
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: riccardo petruzziello
+  - slot_was_set:
+    - reminder: unset
+  - intent: goodbye
+  - action: action_unidentify
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: domenico longobardi
+  - slot_was_set:
+    - user: domenico longobardi
+  - action: action_identify
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: add_provider
+    entities:
+    - acname: house party
+    - deadline: 12/12/2023 11:10
+  - slot_was_set:
+    - acname: house party
+  - slot_was_set:
+    - deadline: 12/12/2023 11:10
+  - action: add_form
+  - active_loop: add_form
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - acname: house party
+  - slot_was_set:
+    - deadline: 12/12/2023 11:10
+  - slot_was_set:
+    - reminder: unset
+  - slot_was_set:
+    - acname: house party
+  - slot_was_set:
+    - deadline: 12/12/2023 11:10
+  - slot_was_set:
+    - requested_slot: category
+  - slot_was_set:
+    - category: partying
+  - slot_was_set:
+    - category: partying
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_add
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: remove_provider
+    entities:
+    - acname: jogging
+  - slot_was_set:
+    - acname: jogging
+  - action: user_form_r
+  - active_loop: user_form_r
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_remove
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: dd_update_provider
+    entities:
+    - acname: baby shower
+    - deadline: 23/12/2023 11:11
+  - slot_was_set:
+    - acname: baby shower
+  - slot_was_set:
+    - deadline: 23/12/2023 11:11
+  - action: dd_form
+  - active_loop: dd_form
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - acname: baby shower
+  - slot_was_set:
+    - deadline: 23/12/2023 11:11
+  - slot_was_set:
+    - acname: baby shower
+  - slot_was_set:
+    - deadline: 23/12/2023 11:11
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: cat_update_provider
+    entities:
+    - acname: polo
+    - category: sport
+  - slot_was_set:
+    - acname: polo
+  - slot_was_set:
+    - category: sport
+  - action: cat_form
+  - active_loop: cat_form
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - acname: polo
+  - slot_was_set:
+    - category: sport
+  - slot_was_set:
+    - acname: polo
+  - slot_was_set:
+    - category: sport
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_thanks
+  - action: action_edit_category
+  - slot_was_set:
+    - user: domenico longobardi
+  - slot_was_set:
+    - reminder: unset
+  - intent: identity_provider
+    entities:
+    - user: luca lo bianco
+  - slot_was_set:
+    - user: luca lo bianco
+  - action: action_identify
+  - slot_was_set:
+    - user: luca lo bianco
+  - slot_was_set:
+    - reminder: unset

@@ -1,0 +1,131 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- cat_update_provider
+- inform
+- add_provider
+- goodbye
+- identity_provider
+- remove_provider
+- dd_update_provider
+- show_provider
+- greet
+- thankyou
+- affirm
+- deny
+- EXTERNAL_reminder
+entities:
+- acname
+- category
+- deadline
+- reminder
+- user
+slots:
+  user:
+    type: text
+    influence_conversation: false
+  acname:
+    type: text
+    influence_conversation: false
+  deadline:
+    type: text
+    influence_conversation: false
+  category:
+    type: text
+    influence_conversation: false
+  reminder:
+    type: text
+    initial_value: unset
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! Tell me what you need.
+  - text: Hi! What should I do for you?
+  utter_noworries:
+  - text: My pleasure.
+  - text: You are welcome!
+  utter_ask_user:
+  - text: Could you first identify yourself?
+  - text: First, let me ask your name.
+  - text: Who's talking?
+  utter_ask_deadline:
+  - text: Could you specify the deadline?
+  - text: Please provide a deadline.
+  utter_ask_category:
+  - text: Could you specify the category?
+  - text: Please specify a category.
+  utter_thanks:
+  - text: Ok, I'm on it.
+  - text: Very Well.
+  - text: Very good, proceeding...
+  - text: Understood.
+  utter_info:
+  - text: 'REMEMBER: I am a schedule bot, input me the appointment with a deadline (dd/mm/yyyy HH:MM) and category (in caps). And of course, first say your name... do not be rude  ^_^'
+actions:
+- action_add
+- action_edit_category
+- action_edit_deadline
+- action_identify
+- action_react_reminder
+- action_remove
+- action_show
+- action_unidentify
+- utter_ask_category
+- utter_ask_deadline
+- utter_ask_user
+- utter_greet
+- utter_info
+- utter_noworries
+- utter_thanks
+forms:
+  user_form_r:
+    required_slots:
+      user:
+      - type: from_entity
+        entity: user
+  user_form_s:
+    required_slots:
+      user:
+      - type: from_entity
+        entity: user
+  add_form:
+    required_slots:
+      user:
+      - type: from_entity
+        entity: user
+      acname:
+      - type: from_entity
+        entity: acname
+      deadline:
+      - type: from_entity
+        entity: deadline
+      category:
+      - type: from_entity
+        entity: category
+      reminder:
+      - type: from_entity
+        entity: reminder
+  dd_form:
+    required_slots:
+      user:
+      - type: from_entity
+        entity: user
+      acname:
+      - type: from_entity
+        entity: acname
+      deadline:
+      - type: from_entity
+        entity: deadline
+  cat_form:
+    required_slots:
+      user:
+      - type: from_entity
+        entity: user
+      acname:
+      - type: from_entity
+        entity: acname
+      category:
+      - type: from_entity
+        entity: category

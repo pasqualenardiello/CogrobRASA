@@ -1,0 +1,108 @@
+version: "2.0"
+
+rules:
+
+- rule: Trigger reminders
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_reminder
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: action_unidentify
+  
+- rule: Say thanks
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+  
+- rule: login
+  steps:
+  - intent: identity_provider
+  - action: action_identify
+  
+- rule: Activate add_form
+  steps:
+  - intent: add_provider
+  - action: add_form
+  - active_loop: add_form
+  
+- rule: Submit add_form
+  condition:
+  - active_loop: add_form
+  steps:
+  - action: add_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_thanks
+  - action: action_add
+
+- rule: Activate dd_form
+  steps:
+  - intent: dd_update_provider
+  - action: dd_form
+  - active_loop: dd_form
+  
+- rule: Submit dd_form
+  condition:
+  - active_loop: dd_form
+  steps:
+  - action: dd_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_thanks
+  - action: action_edit_deadline
+  
+- rule: Activate cat_form
+  steps:
+  - intent: cat_update_provider
+  - action: cat_form
+  - active_loop: cat_form
+  
+- rule: Submit cat_form
+  condition:
+  - active_loop: cat_form
+  steps:
+  - action: cat_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_thanks
+  - action: action_edit_category
+  
+- rule: Activate rem_form
+  steps:
+  - intent: remove_provider
+  - action: user_form_r
+  - active_loop: user_form_r
+  
+- rule: Submit rem_form
+  condition:
+  - active_loop: user_form_r
+  steps:
+  - action: user_form_r
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_thanks
+  - action: action_remove
+  
+- rule: Activate show_form
+  steps:
+  - intent: show_provider
+  - action: user_form_s
+  - active_loop: user_form_s
+  
+- rule: Submit show_form
+  condition:
+  - active_loop: user_form_s
+  steps:
+  - action: user_form_s
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_thanks
+  - action: action_show

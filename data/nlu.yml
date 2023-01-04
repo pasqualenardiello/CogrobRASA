@@ -1,0 +1,996 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Goodbye
+    - Have a nice day
+    - Bye bye
+    - See you tomorrow
+    - ok bye
+    - Been a pleasure
+    - Bye
+    - Good night
+    - ok, bye
+    - See you later
+    - See you
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+- intent: thankyou
+  examples: |
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - thank you
+- intent: identity_provider
+  examples: |
+    - Hey, it's me, [Pasquale Nardiello](user)
+    - I'm [Pasquale Nardiello](user)
+    - I am [Pasquale Nardiello](user)
+    - It's [Pasquale Nardiello](user)
+    - That's [Pasquale Nardiello](user)
+    - Hi, I am [Pasquale Nardiello](user)
+    - Hey, it's me, [Domenico Longobardi](user)
+    - I'm [Domenico Logobardi](user)
+    - I am [Domenico Longobardi](user)
+    - It's [Domenico Longobardi](user)
+    - That's [Domenico Longobardi](user)
+    - Hi, I am [Domenico Longobardi](user)
+    - Hey, it's me, [Riccardo Petruzziello](user)
+    - I'm [Riccardo Petruzziello](user)
+    - I am [Riccardo Petruzziello](user)
+    - It's [Riccardo Petruzziello](user)
+    - That's [Riccardo Petruzziello](user)
+    - Hi, I am [Riccardo Petruzziello](user)
+    - Hello, it's [Pasquale Nardiello](user)
+    - Hello, it's [Giovanni Rana](user)
+    - Hello, it's [Amerigo Vespucci](user)
+    - It's [Giovanni Rana](user)
+    - My name is [Giovanni Giorgio](user)
+    - My name is [Gerardo Carraturo](user)
+    - My name is [Ugo Tognazzi](user)
+    - It's [Giovanni Iandolo](user)
+    - I am [Giovanni Rana](user)
+    - I am [Gerardo Carraturo](user)
+    - My name is [Domenico Longobardi](user)
+    - It's [Alberto Iodice](user)
+    - Hello, I am [Pasquale Nardiello](user)
+    - Hello, my name is [Giovanni Rana](user)
+    - Hi, my name is [Giovanni Rana](user)
+    - Hello, It's me [Pasquale Nardiello](user)
+    - I am [Luca de Luca](user)
+    - My name is [Luigi d'Antonio](user)
+    - Hi, I'm [Guido Maria Pio](user)
+    - Hello, my name is [Guido Maria Pio](user)
+    - My name is [Giovanni d'Arcella](user)
+    - Hi, I am [Gregorio Maria Pio](user)
+    - Ehi, it's [Gregorio Franco Alfonso](user)
+    - Ehi, it's me, [Luca de Luca](user)
+    - Hi, I am [Marco Tullio Cicerone](user)
+    - ehi, it's [Flavio della Monica](user)
+    - Hello, I am [Luigi d'Antonio](user)
+    - ehi there, it's [Luca de Luca](user)
+    - My name is [Diego Armando Maradona](user)
+    - Hello, it's [Luca de Luca](user)
+    - Hey, it's [Giovanni Rana](user)
+    - Hey there, I'm [Luca d'Avanzo](user)
+    - My name is [Lucia della Valle](user)
+    - My name is [Paolo Maria Gomez](user)
+    - Hey, my name is [Riccardo Domenico Nardiello](user)
+    - hi, i'm [alberto giovanni bergoglio](user)
+    - hey, it's me, [pasquale nardiello](user)
+    - i'm [pasquale nardiello](user)
+    - i am [pasquale nardiello](user)
+    - it's [pasquale nardiello](user)
+    - that's [pasquale nardiello](user)
+    - hi, i am [pasquale nardiello](user)
+    - hey, it's me, [domenico longobardi](user)
+    - i'm [domenico logobardi](user)
+    - i am [domenico longobardi](user)
+    - it's [domenico longobardi](user)
+    - that's [domenico longobardi](user)
+    - hi, i am [domenico longobardi](user)
+    - hey, it's me, [riccardo petruzziello](user)
+    - i'm [riccardo petruzziello](user)
+    - i am [riccardo petruzziello](user)
+    - it's [riccardo petruzziello](user)
+    - that's [riccardo petruzziello](user)
+    - hi, i am [riccardo petruzziello](user)
+    - hello, it's [pasquale nardiello](user)
+    - hello, it's [giovanni rana](user)
+    - hello, it's [amerigo vespucci](user)
+    - it's [giovanni rana](user)
+    - my name is [giovanni giorgio](user)
+    - my name is [gerardo carraturo](user)
+    - my name is [ugo tognazzi](user)
+    - it's [giovanni iandolo](user)
+    - i am [giovanni rana](user)
+    - i am [gerardo carraturo](user)
+    - my name is [domenico longobardi](user)
+    - it's [alberto iodice](user)
+    - hello, i am [pasquale nardiello](user)
+    - hello, my name is [giovanni rana](user)
+    - hi, my name is [giovanni rana](user)
+    - hello, it's me [pasquale nardiello](user)
+    - i am [luca de luca](user)
+    - my name is [luigi d'antonio](user)
+    - hi, i'm [guido maria pio](user)
+    - hello, my name is [guido maria pio](user)
+    - my name is [giovanni d'arcella](user)
+    - hi, i am [gregorio maria pio](user)
+    - ehi, it's [gregorio franco alfonso](user)
+    - ehi, it's me, [luca de luca](user)
+    - hi, i am [marco tullio cicerone](user)
+    - ehi, it's [flavio della monica](user)
+    - hello, i am [luigi d'antonio](user)
+    - ehi there, it's [luca de luca](user)
+    - my name is [diego armando maradona](user)
+    - hello, it's [luca de luca](user)
+    - hey, it's [giovanni rana](user)
+    - hey there, i'm [luca d'avanzo](user)
+    - my name is [lucia della valle](user)
+    - my name is [paolo maria gomez](user)
+    - hey, my name is [riccardo domenico nardiello](user)
+    - my name is [sandro tonali](user)
+    - hello, it's [fabio dell'anno](user)
+    - hi, i am [riccardo petruzziello](user)
+    - i am [domenico longobardi](user)
+    - hey, it's [luca lo bianco](user)
+- intent: show_provider
+  examples: |
+    - Show me my [schedule]
+    - Show the [schedule]
+    - Let me check my [schedule]
+    - Make me see my [schedule]
+    - Brief me
+    - Give me the details of my [schedule]
+    - Examinate my [schedule]
+    - brief me
+    - show me my [schedule]
+    - Show me my schedule
+    - Print my [schedule]
+    - show my schedule
+    - show me my schedule
+    - Show my schedule
+    - print my schedule
+    - Can you show me my appointments
+    - Show my appointments
+    - Please show me my appointments
+    - Can you show my appointments?
+    - please brief me
+- intent: remove_provider
+  examples: |
+    - Please remove [Gym](acname)
+    - Remove [Gym](acname)
+    - Pop [Gym](acname) from my [schedule]
+    - Delete [Gym](acname) from my [schedule]
+    - Cut [Gym](acname) from my [schedule]
+    - Please remove [Binge watching](acname)
+    - Remove [Binge watching](acname)
+    - Pop [Binge watching](acname) from my [schedule]
+    - Delete [Binge watching](acname) from my [schedule]
+    - Cut [Binge watching](acname) from my [schedule]
+    - Please remove [swim lesson](acname)
+    - Remove [swim lesson](acname)
+    - Pop [swim lesson](acname) from my [schedule]
+    - Delete [swim lesson](acname) from my [schedule]
+    - Cut [swim lesson](acname) from my [schedule]
+    - Remove [Swimming lesson](acname)
+    - Pop [swim lesson](acname)
+    - Delete [swim lesson](acname)
+    - Cut [swim lesson](acname)
+    - Remove [Snorkeling](category)
+    - Delete [Snorkeling](acname)
+    - Delete [Eye Screening](acname)
+    - Remove [Cogrob exam](acname)
+    - Delete [Dog sitting](acname)
+    - remove [monologuing](acname) from my schedule
+    - Remove [taxes](acname)
+    - Delete [Bowling](acname) from my appointments
+    - Remove [Tax paying](acname) from my appointments
+    - Remove [jogging](acname)
+    - delete [bird watching](acname)
+    - remove [ski diving](acname) from my appointments
+    - pop [boxing](acname)
+    - remove [squats](acname)
+    - remove [swimming](acname)
+    - please remove [gym](acname)
+    - remove [gym](acname)
+    - pop [gym](acname) from my [schedule]
+    - delete [gym](acname) from my [schedule]
+    - cut [gym](acname) from my [schedule]
+    - please remove [binge watching](acname)
+    - remove [binge watching](acname)
+    - pop [binge watching](acname) from my [schedule]
+    - delete [binge watching](acname) from my [schedule]
+    - cut [binge watching](acname) from my [schedule]
+    - please remove [swim lesson](acname)
+    - remove [swim lesson](acname)
+    - pop [swim lesson](acname) from my [schedule]
+    - delete [swim lesson](acname) from my [schedule]
+    - cut [swim lesson](acname) from my [schedule]
+    - remove [swimming lesson](acname)
+    - pop [swim lesson](acname)
+    - delete [swim lesson](acname)
+    - cut [swim lesson](acname)
+    - remove [snorkeling](category)
+    - delete [snorkeling](acname)
+    - delete [eye screening](acname)
+    - remove [cogrob exam](acname)
+    - delete [dog sitting](acname)
+    - remove [taxes](acname)
+    - delete [bowling](acname) from my appointments
+    - remove [tax paying](acname) from my appointments
+    - remove [jogging](acname)
+    - remove [tango](acname)
+    - remove [karate](acname) from my appointments
+    - delete [jogging](acname)
+- intent: dd_update_provider
+  examples: |
+    - Set new deadline for [Lesson](acname) to [11/12/2024 16:00](deadline)
+    - Move [Lesson](acname) to [11/12/2024 16:00](deadline)
+    - Anticipate [Lesson](acname) to [11/12/2024 16:00](deadline)
+    - Postpone [Lesson](acname) to [11/12/2024 16:00](deadline)
+    - Make [13/11/2022 16:30](deadline) the new deadline for [Lesson](acname)
+    - Set new deadline for [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - Move [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - Anticipate [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - Postpone [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - Make [13/11/2022 16:30](deadline) the new deadline for [dance lesson](acname)
+    - Set new deadline for [CS Lecture](acname) to [07/01/2023 00:30](deadline)
+    - Move [CS Lecture](acname) to [07/01/2023 00:30](deadline)
+    - Anticipate [CS Lecture](acname) to [07/01/2023 00:30](deadline)
+    - Postpone [CS Lecture](acname) to [07/01/2023 00:30](deadline)
+    - Make [07/01/2023 00:30](deadline) the new deadline for [CS Lecture](acname)
+    - Set new deadline for [Lesson](acname)
+    - Move [Lesson](acname)
+    - Anticipate [Lesson](acname)
+    - Postpone [Lesson](acname)
+    - Set new deadline for [dance lesson](acname)
+    - Move [dance lesson](acname)
+    - Anticipate [dance lesson](acname)
+    - Postpone [dance lesson](acname)
+    - Set new deadline for [CS Lecture](acname)
+    - Move [CS Lecture](acname)
+    - Anticipate [CS Lecture](acname)
+    - Postpone [CS Lecture](acname)
+    - Anticipate [Palestra](acname)
+    - Postpone [Yoga](acname)
+    - Anticipate [coding](acname)
+    - Postpone [gyno screening](acname)
+    - Postpone [House finding](acname) on date [05/02/2023 16:00](deadline)
+    - Change deadline for [House finding](acname) to [16/03/2023 11:00](deadline)
+    - Anticipate [Dance lesson](acname)
+    - Postpone [Bowling](acname) to [17/12/2022 18:00](deadline)
+    - Postpone [Swim practice](acname) to [15/12/2022 12:00](deadline)
+    - Postpone [gliding](acname) to [12/12/2012 11:00](deadline)
+    - anticipate [golf](acname) to [12/12/2022 12:00](deadline)
+    - set new deadline for [lesson](acname) to [11/12/2024 16:00](deadline)
+    - move [lesson](acname) to [11/12/2024 16:00](deadline)
+    - anticipate [lesson](acname) to [11/12/2024 16:00](deadline)
+    - postpone [lesson](acname) to [11/12/2024 16:00](deadline)
+    - make [13/11/2022 16:30](deadline) the new deadline for [lesson](acname)
+    - set new deadline for [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - move [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - anticipate [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - postpone [dance lesson](acname) to [13/11/2022 16:30](deadline)
+    - make [13/11/2022 16:30](deadline) the new deadline for [dance lesson](acname)
+    - set new deadline for [cs lecture](acname) to [07/01/2023 00:30](deadline)
+    - move [cs lecture](acname) to [07/01/2023 00:30](deadline)
+    - anticipate [cs lecture](acname) to [07/01/2023 00:30](deadline)
+    - postpone [cs lecture](acname) to [07/01/2023 00:30](deadline)
+    - make [07/01/2023 00:30](deadline) the new deadline for [cs lecture](acname)
+    - set new deadline for [lesson](acname)
+    - move [lesson](acname)
+    - anticipate [lesson](acname)
+    - postpone [lesson](acname)
+    - set new deadline for [dance lesson](acname)
+    - move [dance lesson](acname)
+    - anticipate [dance lesson](acname)
+    - postpone [dance lesson](acname)
+    - set new deadline for [cs lecture](acname)
+    - move [cs lecture](acname)
+    - anticipate [cs lecture](acname)
+    - postpone [cs lecture](acname)
+    - anticipate [palestra](acname)
+    - postpone [yoga](acname)
+    - anticipate [coding](acname)
+    - postpone [gyno screening](acname)
+    - postpone [house finding](acname) on date [05/02/2023 16:00](deadline)
+    - change deadline for [house finding](acname) to [16/03/2023 11:00](deadline)
+    - postpone [bowling](acname) to [17/12/2022 18:00](deadline)
+    - postpone [swim practice](acname) to [15/12/2022 12:00](deadline)
+    - postpone [gliding](acname) to [12/12/2012 11:00](deadline)
+    - postpone [preying](acname)
+    - postpone [golf](acname) to [11/11/2022 22:20](deadline)
+    - anticipate [baby shower](acname) to [23/12/2023 11:11](deadline)
+- intent: cat_update_provider
+  examples: |
+    - Set new category for [Coffee break](acname) to [CHILLING](category)
+    - Change the category for [Coffee break](acname) to [CHILLING](category)
+    - Categorize [Coffee break](acname) as [CHILLING](category)
+    - Put [Coffee break](acname) as [CHILLING](category)
+    - Label [Coffee break](acname) as [CHILLING](category)
+    - Set new category for [Swimming](acname) to [SPORT](category)
+    - Change the category for [Swimming](acname) to [SPORT](category)
+    - Categorize [Swimming](acname) as [SPORT](category)
+    - Put [Swimming](acname) as [SPORT](category)
+    - Label [Swimming](acname) as [SPORT](category)
+    - Set new category for [Music practice](acname) to [PRACTICE](category)
+    - Change the category for [Music practice](acname) to [PRACTICE](category)
+    - Categorize [Music practice](acname) as [PRACTICE](category)
+    - Put [Music practice](acname) as [PRACTICE](category)
+    - Label [Music practice](acname) as [PRACTICE](category)
+    - Set new category for [Coffee break](acname)
+    - Change the category for [Coffee break](acname)
+    - Categorize [Coffee break](acname)
+    - Label [Coffee break](acname)
+    - Set new category for [Swimming](acname)
+    - Change the category for [Swimming](acname)
+    - Categorize [Swimming](acname)
+    - Label [Swimming](acname)
+    - Set new category for [Music practice](acname)
+    - Change the category for [Music practice](acname)
+    - Categorize [Music practice](acname)
+    - Label [Music practice](acname)
+    - Update category for [Coffee break](acname) to [CHILLING](category)
+    - Update category for [exam work](acname)
+    - Update category for [Funnygaming](acname) to [GAMING](category)
+    - Change category for [Dog sitting](acname) to [HOBBY](category)
+    - Change category for [Bowling](acname) to [SPORT](category)
+    - Set category of [House finding](acname) to [LIVING](category)
+    - set category for [drawing](acname) to [ART](category)
+    - set category for [fishing lesson](acname) to [sport](category)
+    - change the category for [coffee break](acname) to [chilling](category)
+    - categorize [coffee break](acname) as [chilling](category)
+    - put [coffee break](acname) as [chilling](category)
+    - label [coffee break](acname) as [chilling](category)
+    - set new category for [swimming](acname) to [sport](category)
+    - change the category for [swimming](acname) to [sport](category)
+    - categorize [swimming](acname) as [sport](category)
+    - put [swimming](acname) as [sport](category)
+    - label [swimming](acname) as [sport](category)
+    - set new category for [music practice](acname) to [practice](category)
+    - change the category for [music practice](acname) to [practice](category)
+    - categorize [music practice](acname) as [practice](category)
+    - put [music practice](acname) as [practice](category)
+    - label [music practice](acname) as [practice](category)
+    - set new category for [coffee break](acname)
+    - change the category for [coffee break](acname)
+    - categorize [coffee break](acname)
+    - label [coffee break](acname)
+    - set new category for [swimming](acname)
+    - change the category for [swimming](acname)
+    - categorize [swimming](acname)
+    - label [swimming](acname)
+    - set new category for [music practice](acname)
+    - change the category for [music practice](acname)
+    - categorize [music practice](acname)
+    - label [music practice](acname)
+    - update category for [coffee break](acname) to [chilling](category)
+    - update category for [exam work](acname)
+    - update category for [funnygaming](acname) to [gaming](category)
+    - change category for [dog sitting](acname) to [hobby](category)
+    - change category for [bowling](acname) to [sport](category)
+    - set category of [house finding](acname) to [living](category)
+    - set category for [drawing](acname) to [art](category)
+    - organize [sandwich making](acname)
+    - Update category for [preying](acname) to [mystic](category)
+    - set category for [kungfu](acname) to [fighting](category)
+    - categorize [polo](acname) as [sport](category)
+- intent: add_provider
+  examples: |
+    - Add [Data analysis exam](acname) to [schedule] at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule] at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname) to [schedule] in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule]
+    - Add [Data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname)
+    - Insert [Data analysis exam](acname) into [schedule] at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) into [schedule] at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname) into [schedule] in category [UNIVERSITY](category)
+    - insert [Data analysis exam](acname) into [schedule]
+    - Insert [Data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname)
+    - Add [Soccer match](acname) to [schedule] at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule] at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname) to [schedule] in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule]
+    - Add [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) in category [SPORT](category)
+    - Add [Soccer match](acname) at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname)
+    - Insert [Soccer match](acname) into [schedule] at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) into [schedule] at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname) into [schedule] in category [SPORT](category)
+    - insert [Soccer match](acname) into [schedule]
+    - Insert [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) in category [SPORT](category)
+    - Insert [Soccer match](acname) at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname)
+    - Add [piano lesson](acname) to [schedule] at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule] at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname) to [schedule] in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule]
+    - Add [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) in category [MUSIC](category)
+    - Add [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname)
+    - Insert [piano lesson](acname) into [schedule] at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) into [schedule] at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname) into [schedule] in category [MUSIC](category)
+    - insert [piano lesson](acname) into [schedule]
+    - Insert [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) in category [MUSIC](category)
+    - Insert [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname)
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Plan [Data analysis exam](acname) in category [UNIVERSITY](category)
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - Plan [Data analysis exam](acname)
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Plan [Soccer match](acname) in category [SPORT](category)
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline)
+    - Plan [Soccer match](acname)
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Plan [piano lesson](acname) in category [MUSIC](category)
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - Plan [piano lesson](acname)
+    - Add [Swimming lesson](acname) to [schedule]
+    - Insert [Shopping](acname) into [schedule]
+    - Insert [Bunjee Jumping](acname) into [schedule]
+    - Insert [Fishing lesson](acname) into [schedule]
+    - Plan [Robotics exam](acname) at [18/01/2023 15:00](deadline)
+    - Plan [Cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [EXAMS](category)
+    - Plan [Swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [SPORT](category)
+    - Add [Data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [UNIVERSITY](category)
+    - insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} n category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Add [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [SPORT](category)
+    - insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [MUSIC](category)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) in category [UNIVERSITY](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) in category [SPORT](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) in category [MUSIC](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Swimming lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Shopping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Bunjee Jumping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Fishing lesson](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Robotics exam](acname) at [18/01/2023 15:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [EXAMS](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [SPORT](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [UNIVERSITY](category)
+    - Add [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Add [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [UNIVERSITY](category)
+    - insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} n category [UNIVERSITY](category)
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - Insert [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Add [Soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Add [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Add [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Add [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [SPORT](category)
+    - insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [SPORT](category)
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [SPORT](category)
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - Insert [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [MUSIC](category)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [MUSIC](category)
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [MUSIC](category)
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - Insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [UNIVERSITY](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) in category [UNIVERSITY](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) at [11/02/2023 12:30](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) in category [SPORT](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) at [15/01/2024 11:10](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) in category [MUSIC](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) at [01/01/2023 01:00](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Swimming lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Shopping](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Bunjee Jumping](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Insert [Fishing lesson](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Robotics exam](acname) at [18/01/2023 15:00](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [EXAMS](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [SPORT](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Ski lesson](acname) at [14/12/2022 16:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Data analysis exam](acname) at [11/02/2023 12:30](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Soccer match](acname) at [15/01/2024 11:10](deadline) in category [SPORT](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Soccer match](acname) in category [SPORT](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Soccer match](acname) at [15/01/2024 11:10](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [MUSIC](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [piano lesson](acname) in category [MUSIC](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [piano lesson](acname) at [01/01/2023 01:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Swimming lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Shopping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Bunjee Jumping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Fishing lesson](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Robotics exam](acname) at [18/01/2023 15:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [EXAMS](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Organize [Snorkeling](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [12/03/2023 17:00](deadline) in category [SPORT](category)
+    - Add [coding](acname) to my schedule
+    - Insert [Funnygaming](acname) into my schedule
+    - Add [Eye Screening](acname) on [12/11/2022 14:00](deadline) in category [HEALTH](category)
+    - Insert [House finding](acname) into my schedule at date [02/02/2023 16:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Dog sitting](acname) on [12/12/2022 17:00](deadline)
+    - Insert [Tax paying](acname) into my schedule on date [02/01/2023 10:00](deadline)
+    - Plan [monologuing](acname) on [12/11/2022 17:00](deadline)
+    - Schedule [Tax paying](acname) on date [11/05/2023 12:00](deadline) in category [UNIVERSITY](category) [with reminder]{"entity": "reminder", "value": "set"}
+    - Plan [Bowling](acname) on date [16/11/2022 18:00](deadline) [with reminder]{"entity": "reminder", "value": "set"}
+    - Plan [taxes](acname) at [15/12/2022 18:00](deadline) in category [MONEY](category)
+    - Add [Boxing](acname) to my schedule on date [15/11/2022 18:00](deadline) in category [SPORT](category)
+    - Plan [Bird watching](acname) on date [12/12/2022 11:00](deadline) in category [NATURE](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - Add [Netflix scrolling](acname) to my appointments
+    - Add [Karate lesson](acname) to my schedule [with a reminder]{"entity": "reminder", "value": "set"} at [12/12/2022 18:00](deadline)
+    - Plan [Ski diving](acname) on date [15/12/2022 16:00](deadline) in category [SPORT](category) [with reminder]{"entity": "reminder", "value": "set"}
+    - Add [Jogging](acname) at [14/11/2022 11:00](deadline)
+    - add [singing](acname) at [11/11/2011 11:11](deadline) in [SING](category)
+    - add [surf lesson](acname) at [11/11/2011 11:11](deadline) in [SPORT](category)
+    - add [boxe](acname) on [13/12/2022 11:10](deadline) in [SPORT](category)
+    - plan [swim lesson](acname) at [05/11/2022 18:23](deadline) in category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [data analysis exam](acname) to [schedule] at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) to [schedule] at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname) to [schedule] in category [university](category)
+    - add [data analysis exam](acname) to [schedule]
+    - add [data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) in category [university](category)
+    - add [data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname)
+    - insert [data analysis exam](acname) into [schedule] at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) into [schedule] at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname) into [schedule] in category [university](category)
+    - insert [data analysis exam](acname) into [schedule]
+    - insert [data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) in category [university](category)
+    - insert [data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname)
+    - add [soccer match](acname) to [schedule] at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) to [schedule] at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname) to [schedule] in category [sport](category)
+    - add [soccer match](acname) to [schedule]
+    - add [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) in category [sport](category)
+    - add [soccer match](acname) at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname)
+    - insert [soccer match](acname) into [schedule] at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) into [schedule] at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname) into [schedule] in category [sport](category)
+    - insert [soccer match](acname) into [schedule]
+    - insert [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) in category [sport](category)
+    - insert [soccer match](acname) at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname)
+    - add [piano lesson](acname) to [schedule] at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) to [schedule] at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname) to [schedule] in category [music](category)
+    - add [piano lesson](acname) to [schedule]
+    - add [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) in category [music](category)
+    - add [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname)
+    - insert [piano lesson](acname) into [schedule] at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) into [schedule] at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname) into [schedule] in category [music](category)
+    - insert [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) in category [music](category)
+    - insert [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname)
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [university](category)
+    - plan [data analysis exam](acname) in category [university](category)
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline)
+    - plan [data analysis exam](acname)
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category)
+    - plan [soccer match](acname) in category [sport](category)
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline)
+    - plan [soccer match](acname)
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category)
+    - plan [piano lesson](acname) in category [music](category)
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline)
+    - plan [piano lesson](acname)
+    - add [swimming lesson](acname) to [schedule]
+    - insert [shopping](acname) into [schedule]
+    - insert [bunjee jumping](acname) into [schedule]
+    - insert [fishing lesson](acname) into [schedule]
+    - plan [robotics exam](acname) at [18/01/2023 15:00](deadline)
+    - plan [cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [exams](category)
+    - plan [swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [sport](category)
+    - add [data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [university](category)
+    - add [data analysis exam](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [university](category)
+    - add [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [university](category)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} n category [university](category)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - add [soccer match](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - add [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [sport](category)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - add [piano lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [music](category)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [university](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) in category [university](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) in category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) in category [music](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [swimming lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [shopping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [bunjee jumping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [fishing lesson](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [robotics exam](acname) at [18/01/2023 15:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [exams](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [university](category)
+    - add [data analysis exam](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - add [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [university](category)
+    - add [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - add [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [university](category)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline) in category [university](category)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} n category [university](category)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [11/02/2023 12:30](deadline)
+    - insert [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - add [soccer match](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - add [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - add [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - add [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [sport](category)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule]
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline) in category [sport](category)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [sport](category)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [15/01/2024 11:10](deadline)
+    - insert [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - add [piano lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - add [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} into [schedule] in category [music](category)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline) in category [music](category)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} in category [music](category)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"} at [01/01/2023 01:00](deadline)
+    - insert [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline) in category [university](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) in category [university](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) at [11/02/2023 12:30](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [data analysis exam](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) in category [sport](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) at [15/01/2024 11:10](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [soccer match](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) in category [music](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) at [01/01/2023 01:00](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [piano lesson](acname) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - add [swimming lesson](acname) to [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [shopping](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [bunjee jumping](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - insert [fishing lesson](acname) into [schedule] [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [robotics exam](acname) at [18/01/2023 15:00](deadline) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - plan [cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [exams](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - organize [swimming lesson](acname) at [13/12/2022 15:00](deadline) with category [sport](category) [alongside a reminder]{"entity": "reminder", "value": "set"}
+    - organize [ski lesson](acname) at [14/12/2022 16:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [data analysis exam](acname) at [11/02/2023 12:30](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [data analysis exam](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [soccer match](acname) at [15/01/2024 11:10](deadline) in category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [soccer match](acname) in category [sport](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [soccer match](acname) at [15/01/2024 11:10](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [soccer match](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [piano lesson](acname) at [01/01/2023 01:00](deadline) in category [music](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [piano lesson](acname) in category [music](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [piano lesson](acname) at [01/01/2023 01:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [piano lesson](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [swimming lesson](acname) to [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [shopping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [bunjee jumping](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [fishing lesson](acname) into [schedule] [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [robotics exam](acname) at [18/01/2023 15:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [cogrob exam](acname) at [12/12/2022 14:00](deadline) with category [exams](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - organize [snorkeling](acname) [with a reminder]{"entity": "reminder", "value": "set"} at [12/03/2023 17:00](deadline) in category [sport](category)
+    - add [coding](acname) to my schedule
+    - insert [funnygaming](acname) into my schedule
+    - add [eye screening](acname) on [12/11/2022 14:00](deadline) in category [health](category)
+    - insert [house finding](acname) into my schedule at date [02/02/2023 16:00](deadline) [with a reminder]{"entity": "reminder", "value": "set"}
+    - plan [dog sitting](acname) on [12/12/2022 17:00](deadline)
+    - insert [tax paying](acname) into my schedule on date [02/01/2023 10:00](deadline)
+    - plan [monologuing](acname) on [12/11/2022 17:00](deadline)
+    - schedule [tax paying](acname) on date [11/05/2023 12:00](deadline) in category [university](category) [with reminder]{"entity": "reminder", "value": "set"}
+    - plan [bowling](acname) on date [16/11/2022 18:00](deadline) [with reminder]{"entity": "reminder", "value": "set"}
+    - plan [taxes](acname) at [15/12/2022 18:00](deadline) in category [money](category)
+    - add [boxing](acname) to my schedule on date [15/11/2022 18:00](deadline) in category [sport](category)
+    - plan [bird watching](acname) on date [12/12/2022 11:00](deadline) in category [nature](category) [with a reminder]{"entity": "reminder", "value": "set"}
+    - add [netflix scrolling](acname) to my appointments
+    - add [karate lesson](acname) to my schedule [with a reminder]{"entity": "reminder", "value": "set"} at [12/12/2022 18:00](deadline)
+    - plan [ski diving](acname) on date [15/12/2022 16:00](deadline) in category [sport](category) [with reminder]{"entity": "reminder", "value": "set"}
+    - add [jogging](acname) at [14/11/2022 11:00](deadline)
+    - add [singing](acname) at [11/11/2011 11:11](deadline) in [sing](category)
+    - add [surf lesson](acname) at [11/11/2011 11:11](deadline) in [sport](category)
+    - add [boxe](acname) on [13/12/2022 11:10](deadline) in [sport](category)
+    - plan [preying](acname) [with a reminder]{"entity": "reminder", "value": "set"}
+    - insert [tango](acname)
+    - insert [sea diving](acname) into my schedule [with a reminder]{"entity": "reminder", "value": "set"} on [11/12/2023 11:11](deadline) in category [action](category)
+    - plan [house party](acname) on [12/12/2023 11:10](deadline)
+- intent: inform
+  examples: |
+    - [MUSIC](category)
+    - [SPORT](category)
+    - [EDUCATION](category)
+    - [NATURE](category)
+    - [EXPLORATION](category)
+    - [EULOGY](category)
+    - [PLANNING](category)
+    - [STUDY](category)
+    - [SIGHTSEEING](category)
+    - [CHILLING](category)
+    - [RELAX](category)
+    - [HOBBY](category)
+    - [PHOTOGRAPHY](category)
+    - [MEETING](category)
+    - [UNIVERSITY](category)
+    - [CHATTING](category)
+    - [11/12/2028 00:00](deadline)
+    - [02/01/1998 10:01](deadline)
+    - [20/10/2000 03:40](deadline)
+    - [15/11/2022 15:35](deadline)
+    - [12/12/2022 15:30](deadline)
+    - [14/12/2022 15:40](deadline)
+    - [18/12/2022 17:00](deadline)
+    - [18/11/2023 12:00](deadline)
+    - [17/08/2024 15:20](deadline)
+    - [PROGRAMMING](category)
+    - [12/12/2022 11:00](deadline)
+    - [15/12/2022 12:00](deadline)
+    - [HEALTH](category)
+    - [16/04/2025 12:00](deadline)
+    - [WORK](category)
+    - [MONEY](category)
+    - [IMPROVEMENT](category)
+    - [06/02/2023 11:00](deadline)
+    - [FUN](category)
+    - [17/11/2022 11:00](deadline)
+    - [fitness](category)
+    - [music](category)
+    - [sport](category)
+    - [education](category)
+    - [nature](category)
+    - [exploration](category)
+    - [eulogy](category)
+    - [planning](category)
+    - [study](category)
+    - [sightseeing](category)
+    - [chilling](category)
+    - [relax](category)
+    - [hobby](category)
+    - [photography](category)
+    - [meeting](category)
+    - [university](category)
+    - [chatting](category)
+    - [programming](category)
+    - [health](category)
+    - [work](category)
+    - [money](category)
+    - [improvement](category)
+    - [fun](category)
+    - [11/12/2023 15:20](deadline)
+    - [religion](category)
+    - [hobbies](category)
+    - [11/11/2011 11:11](deadline)
+    - [dancing](category)
+    - [11/11/2023 12:00](deadline)
+    - [partying](category)
+- synonym: set
+  examples: |
+    - with a reminder
+    - alongside a reminder
+    - with reminder
+- synonym: tasks
+  examples: |
+    - appointments
+    - jobs
+    - schedule
+- regex: deadline
+  examples: |
+    - [0-9]{2}\/[0-9]{2}\/[0-9]{4} [0-9]{2}:[0-9]{2}
